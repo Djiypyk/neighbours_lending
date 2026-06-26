@@ -32,5 +32,5 @@ export const navLinks = [
 export const footerLinks = [
   { label: "Политика конфиденциальности", href: "/privacy" },
   { label: "Пользовательское соглашение", href: "/terms" },
-  { label: "Поддержка", href: "/support" },
+  // TODO: вернуть «Поддержка» → "/support", когда появится почта саппорта и страница.
 ] as const;
