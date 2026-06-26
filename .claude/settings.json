@@ -16,7 +16,12 @@
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
       "Bash(node -p \"require\\('./package.json'\\).devDependencies.wrangler\")",
-      "WebSearch"
+      "WebSearch",
+      "Bash(curl -sI https://moy-rayon-landing.pages.dev/)",
+      "Bash(curl -s https://moy-rayon-landing.pages.dev/robots.txt)",
+      "Bash(curl -s https://moy-rayon-landing.pages.dev/sitemap.xml)",
+      "Bash(curl -s https://moy-rayon-landing.pages.dev/)",
+      "Bash(curl -sI https://moy-rayon.app/)"
     ]
   }
 }
