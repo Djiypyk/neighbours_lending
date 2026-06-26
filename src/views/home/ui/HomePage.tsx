@@ -5,6 +5,7 @@ import { Features } from "@/widgets/features";
 import { Services } from "@/widgets/services";
 import { Messages } from "@/widgets/messages";
 import { SimpleStart } from "@/widgets/simple-start";
+import { Faq } from "@/widgets/faq";
 import { DownloadCta } from "@/widgets/cta";
 import { SiteFooter } from "@/widgets/site-footer";
 
@@ -23,6 +24,7 @@ export function HomePage() {
         <Services />
         <Messages />
         <SimpleStart />
+        <Faq />
         <DownloadCta />
       </main>
       <SiteFooter />

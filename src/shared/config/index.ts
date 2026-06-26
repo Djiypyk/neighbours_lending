@@ -3,6 +3,7 @@ export {
   heroContent,
   communityContent,
   features,
+  faqContent,
   stepsContent,
 } from "./content";
 export { serviceCategories, type ServiceCategory } from "./categories";

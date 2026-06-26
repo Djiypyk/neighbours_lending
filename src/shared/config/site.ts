@@ -8,7 +8,8 @@ export const site = {
   description:
     "Находите людей, услуги, объявления и полезные контакты рядом с вами. «Мой район» — цифровой дом вашего района.",
   url: "https://moy-rayon.app",
-  email: "support@moy-rayon.app",
+  // Временно: личная почта, пока не заведём support@moy-rayon.app
+  email: "m.zarazaka@gmail.com",
   locale: "ru_BY",
   /**
    * Пока приложение не опубликовано — false.
@@ -27,6 +28,7 @@ export const navLinks = [
   { label: "Объявления", href: "#listings" },
   { label: "Услуги", href: "#services" },
   { label: "Как начать", href: "#start" },
+  { label: "Вопросы", href: "#faq" },
 ] as const;
 
 export const footerLinks = [

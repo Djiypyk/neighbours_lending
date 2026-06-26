@@ -28,12 +28,15 @@ export function SiteFooter() {
                   </a>
                 ))}
               </nav>
-              <a
-                href={`mailto:${site.email}`}
-                className="text-ink-soft transition-colors hover:text-primary-dark"
-              >
-                {site.email}
-              </a>
+              <div className="flex flex-col gap-2">
+                <span className="text-sm font-medium text-ink">Поддержка</span>
+                <a
+                  href={`mailto:${site.email}`}
+                  className="text-ink-soft transition-colors hover:text-primary-dark"
+                >
+                  {site.email}
+                </a>
+              </div>
             </div>
           </div>
 

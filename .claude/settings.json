@@ -14,7 +14,9 @@
       "Bash(grep -rnE \"' Б'|\\\\\" Б\\\\\"|`.*Б`|Б\\\\`|byn|BYN\" src --include=*.tsx --include=*.ts)",
       "Bash(xargs -I{} sh -c 'echo \"DEF: {}\"; grep -n -A12 \"BelarusianRubleSign\" \"{}\" | head -20')",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(node -p \"require\\('./package.json'\\).devDependencies.wrangler\")",
+      "WebSearch"
     ]
   }
 }
