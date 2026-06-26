@@ -21,7 +21,12 @@
       "Bash(curl -s https://moy-rayon-landing.pages.dev/robots.txt)",
       "Bash(curl -s https://moy-rayon-landing.pages.dev/sitemap.xml)",
       "Bash(curl -s https://moy-rayon-landing.pages.dev/)",
-      "Bash(curl -sI https://moy-rayon.app/)"
+      "Bash(curl -sI https://moy-rayon.app/)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" https://moy-rayon-landing.pages.dev/yandex_97e1e8ae6a5f0074.html)",
+      "Bash(curl -s https://moy-rayon-landing.pages.dev/yandex_97e1e8ae6a5f0074.html)",
+      "Bash(curl -sI https://moy-rayon-landing.pages.dev/yandex_97e1e8ae6a5f0074.html)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" https://moy-rayon-landing.pages.dev/yandex_97e1e8ae6a5f0074)",
+      "Bash(curl -s https://moy-rayon-landing.pages.dev/yandex_97e1e8ae6a5f0074)"
     ]
   }
 }
