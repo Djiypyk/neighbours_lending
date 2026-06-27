@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "9BJNG7US5U.com.neighbours.app",
+        "paths": ["/listing/*", "/service/*"]
+      }
+    ]
+  }
+}
