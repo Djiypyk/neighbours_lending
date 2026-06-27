@@ -1,5 +1,0 @@
-# Apple и Google требуют, чтобы эти файлы отдавались как application/json.
-/.well-known/apple-app-site-association
-  Content-Type: application/json
-/.well-known/assetlinks.json
-  Content-Type: application/json

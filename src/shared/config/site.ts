@@ -7,7 +7,7 @@ export const site = {
   tagline: "Всё нужное рядом с домом",
   description:
     "Находите людей, услуги, объявления и полезные контакты рядом с вами. «Мой район» — цифровой дом вашего района.",
-  url: "https://moy-rayon-landing.pages.dev",
+  url: "https://moiraion.xyz",
   // Временно: личная почта, пока не заведём support@moy-rayon.app
   email: "m.zarazaka@gmail.com",
   locale: "ru_BY",

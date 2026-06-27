@@ -1,0 +1,36 @@
+# Конфиг для Apache/LiteSpeed-хостинга (hoster.by). Заменяет _headers и
+# _redirects, которые работают только в Cloudflare Pages / Netlify.
+
+# --- Принудительный HTTPS (Universal/App Links работают только по https) ---
+# На hoster.by перед Apache стоит nginx: он терминирует SSL и проксирует запрос
+# по обычному HTTP, поэтому %{HTTPS} здесь всегда off. Реальный протокол клиента
+# приходит в заголовке X-Forwarded-Proto — проверяем и его, иначе будет вечный
+# редирект на https.
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# --- Apple и Google требуют Content-Type: application/json для этих файлов ---
+<Files "apple-app-site-association">
+  ForceType application/json
+</Files>
+<Files "assetlinks.json">
+  ForceType application/json
+</Files>
+
+# --- Заглушка для ссылок на объявления/услуги, когда приложение не перехватило
+# ссылку (не установлено или открыто в браузере). id протаскиваем в query. ---
+RewriteRule ^listing/(.+)$ https://%{HTTP_HOST}/app-link.html?type=listing&id=$1 [R=302,L]
+RewriteRule ^service/(.+)$ https://%{HTTP_HOST}/app-link.html?type=service&id=$1 [R=302,L]
+
+# --- Чистые URL: /privacy → privacy.html, /terms → terms.html.
+# Cloudflare Pages резолвил такие пути сам, на LiteSpeed нужно правило явно.
+# Отдаём *.html, если такой файл существует, не меняя адрес в строке браузера. ---
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# --- Кастомная страница 404 ---
+ErrorDocument 404 /404.html
